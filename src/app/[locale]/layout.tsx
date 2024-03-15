@@ -5,6 +5,10 @@ type Props = {
   params: {locale: string};
 };
 
+export async function generateStaticParams() {
+	return [{locale: "no"}, {locale: "en"}]
+}
+
 export default async function LocaleLayout({
   children,
   params: {locale}
